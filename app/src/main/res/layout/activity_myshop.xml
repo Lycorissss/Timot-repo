@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/light_blue">
+
+    <!-- Header with Back Button and Edit Icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/shopName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Frost Gaming x Pool"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/black" />
+
+        <ImageButton
+            android:id="@+id/buttonEditShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_edit" />
+    </LinearLayout>
+
+    <!-- Shop Logo -->
+    <ImageView
+        android:id="@+id/shopLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_frost_gaming"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/circle_background" />
+
+    <!-- Config Section -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIG"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/pointRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 100 = 1 point"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/shopID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shop ID: frostgxp"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray" />
+
+            <ImageButton
+                android:id="@+id/buttonEditConfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_edit"
+                android:background="?attr/selectableItemBackground" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Staff List Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Staff List"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Repeated Card for Each Staff Member -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/staff1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Mohammad Wira"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/staff1Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. HP: 08012345678"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="2dp" />
+
+            <TextView
+                android:id="@+id/staff1Code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unique Code: 10012001"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Input for Staff Invite Link -->
+    <EditText
+        android:id="@+id/staffInviteLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Invite Code"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/black"
+        android:inputType="text" />
+
+    <!-- Bottom Navigation (Example, change IDs and icons as needed) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@android:color/white" />
+
+</LinearLayout>

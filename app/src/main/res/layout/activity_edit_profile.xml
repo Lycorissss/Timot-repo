@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_blue"
+    android:padding="16dp">
+
+    <!-- Back Button and Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correct Account Information"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Profile Photo Edit -->
+    <ImageView
+        android:id="@+id/profilePhotoEdit"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/profile_picture_placeholder"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_background" />
+
+    <Button
+        android:id="@+id/buttonChangePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change a Picture"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp" />
+
+    <!-- Form for Editing Profile -->
+    <EditText
+        android:id="@+id/editSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Surname"
+        android:text="Reswara"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:text="Arya"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Gender Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/buttonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:background="@drawable/rounded_button_selected"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/buttonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:background="@drawable/rounded_button_unselected"
+            android:textColor="@android:color/black"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/buttonEtc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etc."
+            android:background="@drawable/rounded_button_unselected"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- Date of Birth -->
+    <EditText
+        android:id="@+id/editDOB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Birth"
+        android:text="1988/10/10"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Phone Number -->
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:text="08011112222"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:text="ares.design@mail.com"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Save and Cancel Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:background="@drawable/rounded_button_unselected"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</LinearLayout>

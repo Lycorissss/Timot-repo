@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/profileFragment">
+
+    <!-- Profile Fragment -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.uts_pagisore.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+
+        <!-- Action ke Edit Profile Fragment -->
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+
+    <!-- Edit Profile Activity -->
+    <activity
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.uts_pagisore.EditProfileActivity"
+        android:label="Edit Profile"
+        tools:layout="@layout/activity_edit_profile" />
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.uts_pagisore.HomeFragment"
+        android:label="HomeFragment">
+
+        <!-- Action navigasi ke My Shop Activity -->
+        <action
+            android:id="@+id/action_homeFragment_to_myShopActivity"
+            app:destination="@id/myShopActivity" />
+    </fragment>
+
+    <!-- My Shop Activity -->
+    <activity
+        android:id="@+id/myShopActivity"
+        android:name="com.example.uts_pagisore.MyshopActivity"
+        android:label="My Shop" />
+</navigation>

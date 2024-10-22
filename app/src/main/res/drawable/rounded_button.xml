@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State saat ditekan -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp"/>
+            <solid android:color="#3700B3"/> <!-- Warna tombol saat ditekan -->
+        </shape>
+    </item>
+
+    <!-- State default (tidak ditekan) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp"/> <!-- Sudut membulat -->
+            <solid android:color="#6200EE"/> <!-- Warna tombol default -->
+        </shape>
+    </item>
+</selector>
