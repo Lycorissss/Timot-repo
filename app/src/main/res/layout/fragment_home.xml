@@ -1,134 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/light_blue"
-    android:padding="16dp">
+    android:background="@drawable/home"
+    tools:context=".MainActivity">
 
-    <!-- Header Card menggunakan ConstraintLayout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/header_background"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="216dp"
+        android:background="@drawable/card"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <!-- Tulisan V-Member -->
-        <TextView
-            android:id="@+id/appName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="V-Member"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Container untuk My Shop dan Membership Buttons -->
         <LinearLayout
-            android:id="@+id/buttonContainer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/appName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            android:orientation="horizontal" />
 
-            <!-- Button My Shop -->
-            <LinearLayout
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="323dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/home_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
                 android:id="@+id/buttonMyShop"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/button_background"
-                android:padding="8dp"
-                android:layout_marginEnd="8dp"
-                android:elevation="4dp">
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/store"
+                android:drawablePadding="8dp"
+                android:text="My Shop"
+                android:textColor="@color/black" />
 
-                <ImageView
-                    android:id="@+id/iconMyShop"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_shop"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="My Shop" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="My Shop"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <!-- Button Membership -->
-            <LinearLayout
+            <Button
                 android:id="@+id/buttonMembership"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/button_background"
-                android:padding="8dp"
-                android:elevation="4dp">
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/card_ikon"
+                android:drawablePadding="8dp"
+                android:text="Membership"
+                android:textColor="@color/black" />
 
-                <ImageView
-                    android:id="@+id/iconMembership"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_membership"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="Membership" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Membership"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="396dp"
+        android:layout_height="69dp"
+        android:background="@drawable/navbar"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/buttonHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/homenavbar" />
+
+            <ImageButton
+                android:id="@+id/buttonQR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/qr" />
+
+
+            <ImageButton
+                android:id="@+id/buttonMail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/mailpuki" />
+
+            <ImageButton
+                android:id="@+id/buttonProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/profilikon" />
+
 
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Section Title -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recent Membership"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"
-        android:layout_gravity="start" />
+    </RelativeLayout>
 
-    <!-- RecyclerView for Memberships -->
+    <!-- Add New Membership Button -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewMemberships"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
+        android:dividerHeight="16dp"
         android:padding="8dp"
         android:scrollbars="vertical"
-        android:dividerHeight="16dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddMembership"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <!-- Add New Membership Button -->
     <Button
         android:id="@+id/buttonAddMembership"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/rounded_button"
-        android:text="Add New Membership"
-        android:textColor="@android:color/white"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:textSize="16sp" />
-
-</LinearLayout>
+        android:text="Add New Membership"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.841" />
+</androidx.constraintlayout.widget.ConstraintLayout>
